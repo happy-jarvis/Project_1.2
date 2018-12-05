@@ -11,7 +11,5 @@ private:
 public:
 	Worker();
 	void set(string name, string post, int year);
-	string get_name();
-	string get_post();
-	int get_year();
+	void get(int ID);
 };

@@ -20,4 +20,8 @@ private:
 public:
 	List();
 	~List();
+	void create(int length);
+	void push();
+	void fill(string name, string post, int year, int ID);
+	void show(int ID);
 };

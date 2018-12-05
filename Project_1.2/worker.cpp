@@ -14,17 +14,7 @@ void Worker::set(string name, string post, int year)
 	this->year = year;
 }
 
-string Worker::get_name()
+void Worker::get(int ID)
 {
-	return name;
-}
-
-string Worker::get_post()
-{
-	return post;
-}
-
-int Worker::get_year()
-{
-	return year;
+	cout << ID + 1 << "\t\t\t" << name << "\t\t\t" << post << "\t\t\t" << year << endl;
 }

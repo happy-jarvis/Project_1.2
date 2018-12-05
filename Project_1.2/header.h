@@ -3,6 +3,7 @@
 #include <iostream>
 #include <locale.h>
 #include <Windows.h>
+#include <string>
 
 #define CLS system("cls")
 #define SLEEP Sleep(970)
