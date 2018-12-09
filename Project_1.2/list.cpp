@@ -26,11 +26,12 @@ List::Node::Node(Worker data, Node * ptrNext)
 
 void List::create(int length)
 {
-	if (length < 1 || length >= 20) throw "¬ведена неккоректна€ длина списка!";
+	if (length < 1) throw "¬ведена неккоректна€ длина списка!";
 	for (int i = 0; i < length; i++)
 	{
 		push();
 	}
+	this->length = length;
 }
 
 void List::push()
@@ -56,4 +57,30 @@ void List::show(int ID)
 	if (ID == 0) tail = head;
 	else tail = tail->ptrNext;
 	tail->data.get(ID);
+}
+
+void List::sorting()
+{
+	for (int i = 0; i < length - 1; i++)
+	{
+		tail = head;
+
+		for (int j = 0; j < length - i - 1; j++)
+		{
+			if (tail->data.get_surname() > tail->ptrNext->data.get_surname())
+			{
+				swap(tail->data, tail->ptrNext->data);
+			}
+			tail = tail->ptrNext;
+		}
+	}
+}
+
+void List::swap(Worker &object_1, Worker &object_2)
+{
+	Worker temp;
+
+	temp = object_1;
+	object_1 = object_2;
+	object_2 = temp;
 }

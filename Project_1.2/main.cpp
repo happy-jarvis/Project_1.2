@@ -53,10 +53,10 @@ int main()
 			break;
 		case 2:
 			CLS;
-			cout << "ID" << "\t\t\t" << "Ф.И.О." << "\t\t\t" << "\tДолжность" << "\t\t\t" << "Год поступления" << endl;
+			cout << "ID" << "\t\t\t" << "Ф.И.О." << "\t\t\t" << "\tДолжность" << "\t\t" << "Год поступления" << endl;
+			list.sorting();
 			for (int i = 0; i < temp_length; i++) list.show(i);
 			PAUSE;
-			break;
 			break;
 		case 3:
 			break;
